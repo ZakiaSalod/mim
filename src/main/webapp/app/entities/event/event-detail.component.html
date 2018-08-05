@@ -1,0 +1,65 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="event">
+            <h2><span jhiTranslate="mimApp.event.detail.title">Event</span> {{event.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mimApp.event.postedBy">Posted By</span></dt>
+                <dd>
+                    <span>{{event.postedBy}}</span>
+                </dd>
+                <dt><span jhiTranslate="mimApp.event.eventName">Event Name</span></dt>
+                <dd>
+                    <span>{{event.eventName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mimApp.event.briefDescription">Brief Description</span></dt>
+                <dd>
+                    <span>{{event.briefDescription}}</span>
+                </dd>
+                <dt><span jhiTranslate="mimApp.event.eventDate">Event Date</span></dt>
+                <dd>
+                    <span>{{event.eventDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="mimApp.event.province">Province</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'mimApp.Province.' + event.province}}">{{event.province}}</span>
+                </dd>
+                <dt><span jhiTranslate="mimApp.event.region">Region</span></dt>
+                <dd>
+                    <span>{{event.region}}</span>
+                </dd>
+                <dt><span jhiTranslate="mimApp.event.address">Address</span></dt>
+                <dd>
+                    <span>{{event.address}}</span>
+                </dd>
+                <dt><span jhiTranslate="mimApp.event.eventWebsite">Event Website</span></dt>
+                <dd>
+                    <span>{{event.eventWebsite}}</span>
+                </dd>
+                <dt><span jhiTranslate="mimApp.event.user">User</span></dt>
+                <dd>
+                    {{event.user?.login}}
+                </dd>
+                <dt><span jhiTranslate="mimApp.event.category">Category</span></dt>
+                <dd>
+                    <span *ngFor="let category of event.categories; let last = last">
+                        <a [routerLink]="['/category', category?.id, 'view' ]">{{category.name}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/event', event.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

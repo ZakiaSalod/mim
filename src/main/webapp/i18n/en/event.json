@@ -1,0 +1,31 @@
+
+{
+    "mimApp": {
+        "event" : {
+            "home": {
+                "title": "Events",
+                "createLabel": "Create a new Event",
+                "createOrEditLabel": "Create or edit a Event"
+            },
+            "created": "A new Event is created with identifier {{ param }}",
+            "updated": "A Event is updated with identifier {{ param }}",
+            "deleted": "A Event is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Event {{ id }}?"
+            },
+            "detail": {
+                "title": "Event"
+            },
+            "postedBy": "Posted By",
+            "eventName": "Event Name",
+            "briefDescription": "Brief Description",
+            "eventDate": "Event Date",
+            "province": "Province",
+            "region": "Region",
+            "address": "Address",
+            "eventWebsite": "Event Website",
+            "user": "User",
+            "category": "Category"
+        }
+    }
+}

@@ -1,0 +1,123 @@
+<div class="row">
+    <div class="col-md-3">
+        <span class="hipster img-fluid rounded"></span>
+    </div>
+    <div class="col-md-9">
+        <h1 class="display-4" jhiTranslate="home.title">Mandela in Me</h1>
+        <p class="lead" jhiTranslate="home.subtitle">Find your humanity</p>
+<!--        <p class="about" >About</p>
+                    <div class="alert alert-warning" *ngSwitchCase="false">
+                <span jhiTranslate="global.messages.info.authenticated.prefix">If you want to </span>
+                <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">sign in</a><span jhiTranslate="global.messages.info.authenticated.suffix">, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").</span>
+            </div>-->
+
+
+
+        <p class="aboutheading" >About</p>
+        <p class="about" >
+            Mandela in Me is a community, communication-based platform whereby NPOs, NGOs and citizens can collaborate to communicate and meet their needs and to create awareness where the general public can donate their time, energy or money.
+            <br>
+
+            Mandela in Me strives to make a better world, through using the Sustainable Development Goals as the fundamental principles of our application.
+            <br>
+
+            Our application has streamlined the Sustainable Development Goals into 5 categories :
+           <ol>
+            <li>Poverty</li>
+            <li>Health</li>
+            <li>Education</li>
+            <li>Environment</li>
+            <li>Equality</li>
+          </ol>
+
+            In order for the world to become a better place, we all need to lend a helping hand to people who need it most. This will bring out the Humanity in each and every one of us. <br>
+            <div style="font-style: italic;">"It is in your hands to make of the world a better place."</div>
+            <div style="font-style: italic;">~Nelson Mandela</div>
+
+
+
+
+        </p>
+        <p class="currentandupcomingeventsheading" >Current & Upcoming Events</p>
+
+        <div [ngSwitch]="isAuthenticated()">
+<!--            <div class="alert alert-success" *ngSwitchCase="true">
+                <span *ngIf="account" jhiTranslate="home.logged.message"
+                    translateValues="{username: '{{account.login}}'}"> You are logged in as user "{{account.login}}". </span>
+            </div>-->
+
+<!--            <div class="media">
+                <img class="mr-3" src="../../content/images/mandelablackandwhite.jpg" alt="Generic placeholder image">
+                <div class="media-body">
+                    <h5 class="mt-0">Media heading</h5>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+            </div>-->
+
+            <div class="container">
+                <div class="row" style="margin-bottom: 10px">
+                    <!--One of three columns-->
+                    <div class="col-sm">
+                        <img class="mr-3 img-fluid" src="../../content/images/GirlCode-Hackathon.jpg" style="height:200px;width:500px;" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0">GirlCode Hackathon 2018</h5>
+                            Annual event where girls collaborate with code.<br>
+
+                            <div style="font-weight: bold;" >Event Date: </div> 4-5 August 2018 @08AM - 03PM
+                            <div style="font-weight: bold;">Location: </div> | Durban | Cape Town | Johannesburg |
+                            <div style="font-weight: bold;">Category: </div> <div style="font-style: italic;">#Equality</div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <img class="mr-3 img-fluid" src="../../content/images/spcalogo.png" style="height:200px;width:350px;" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0">Ladies' Breakfast for Women's Month</h5>
+                            A fun-filled morning of delicious breakfast, fabulous guest speakers, lucky draws and goodie bags.<br>
+
+                            <div style="font-weight: bold;" >Event Date: </div> 7 August 2018 @9AM
+                            <div style="font-weight: bold;">Location: </div> Durban
+                            <div style="font-weight: bold;">Category: </div> <div style="font-style: italic;">#Environment</div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <img class="mr-3 img-fluid" src="../../content/images/cupcakes4kidswithcancer.jpg" style="height:200px;width:500px;" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0">National Cupcake Day 4 Kids With Cancer</h5>
+                            Annual event to raise awareness and funds for kids with Cancer, through selling cupcakes.<br>
+
+                            <div style="font-weight: bold;" >Event Date: </div> 29 September 2018
+                            <div style="font-weight: bold;">Location: </div> South Africa
+                            <div style="font-weight: bold;">Category: </div> <div style="font-style: italic;">#Health</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+<!--            <div class="alert alert-warning" *ngSwitchCase="false">
+                <span jhiTranslate="global.messages.info.authenticated.prefix">If you want to </span>
+                <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">sign in</a><span jhiTranslate="global.messages.info.authenticated.suffix">, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").</span>
+            </div>-->
+ <!--           <div class="alert alert-warning" *ngSwitchCase="false">
+                <span jhiTranslate="global.messages.info.register.noaccount">You don't have an account yet?</span>&nbsp;
+                <a class="alert-link" routerLink="register" jhiTranslate="global.messages.info.register.link">Register a new account</a>
+            </div>-->
+        </div>
+
+<!--        <p jhiTranslate="home.question">
+            If you have any question on JHipster:
+        </p>
+
+        <ul>
+            <li><a href="https://www.jhipster.tech/" target="_blank" rel="noopener" jhiTranslate="home.link.homepage">JHipster homepage</a></li>
+            <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener" jhiTranslate="home.link.stackoverflow">JHipster on Stack Overflow</a></li>
+            <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener" jhiTranslate="home.link.bugtracker">JHipster bug tracker</a></li>
+            <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener" jhiTranslate="home.link.chat">JHipster public chat room</a></li>
+            <li><a href="https://twitter.com/java_hipster" target="_blank" rel="noopener" jhiTranslate="home.link.follow">follow @java_hipster on Twitter</a></li>
+        </ul>
+
+        <p>
+            <span jhiTranslate="home.like">If you like JHipster, don't forget to give us a star on</span> <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" jhiTranslate="home.github">GitHub</a>!
+        </p>-->
+    </div>
+</div>
